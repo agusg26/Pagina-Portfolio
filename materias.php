@@ -51,9 +51,9 @@ try {
                                 Eliminar</a>
                         </td>
                         <td class="col-oculta text-center">
-                            <button type="button" class="btn btn-primary"
-                                href="materias.php?id=<?= $materia['materias_id']; ?>">
-                                Editar</button>
+                            <a class="btn btn-primary" href="modificar_materia.php?id=<?= $materia['materias_id']; ?>">
+                                Editar
+                            </a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

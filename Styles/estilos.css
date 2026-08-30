@@ -115,6 +115,18 @@ body {
     display: none;
 }
 
+.modo-edicion .col-oculta,
+.modo-edicion th.col-oculta,
+.modo-edicion td.col-oculta {
+    display: table-cell !important;
+}
+
+.modo-edicion button.col-oculta,
+.modo-edicion .btn.col-oculta,
+.modo-edicion div.col-oculta {
+    display: inline-flex !important;
+}
+
 /* =========================================================
    MODAL FLOTANTE CON FONDO DESENFOCADO (CARD MODAL)
 ========================================================= */
@@ -280,8 +292,8 @@ body {
     display: flex;
     flex-direction: column;
     background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.18), transparent 35%),
-                radial-gradient(circle at 90% 80%, rgba(100, 181, 246, 0.18), transparent 35%),
-                linear-gradient(135deg, #0d071a 0%, #1a0f2e 50%, #120c22 100%);
+        radial-gradient(circle at 90% 80%, rgba(100, 181, 246, 0.18), transparent 35%),
+        linear-gradient(135deg, #0d071a 0%, #1a0f2e 50%, #120c22 100%);
     color: #ffffff;
 }
 
@@ -309,6 +321,7 @@ body {
         opacity: 0;
         transform: translateY(20px) scale(0.96);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);

@@ -17,8 +17,15 @@ try {
 }
 ?>
 
-<div class="table-responsive mt-4">
-    <button class="btn btn-outline-light" style="margin-bottom: 10px;" id="btn-editar" type="button">Editar</button>
+<div class="table-responsive mt-4" id="contenedor-tabla-materias">
+    <div class="d-flex align-items-center gap-2 mb-3">
+        <button class="btn btn-outline-dark" id="btn-editar" type="button">
+            <i class="bi bi-pencil-square me-1"></i>Editar
+        </button>
+        <button class="btn btn-success col-oculta" id="btn-abrir-modal" type="button">
+            <i class="bi bi-plus-circle me-1"></i>Agregar Materia
+        </button>
+    </div>
     <table class="table table-hover table-bordered table-striped shadow-sm align-middle">
         <thead class="table-dark text-center">
             <tr>
@@ -69,7 +76,7 @@ try {
 </div>
 
 <!-- Modal Flotante: Agregar Materia -->
-<div class="col-oculta" id="modal-agregar-materia" class="modal-overlay-blur" aria-hidden="true" role="dialog">
+<div id="modal-agregar-materia" class="modal-overlay-blur" aria-hidden="true" role="dialog">
     <div class="modal-card-float">
         <div class="modal-card-header">
             <h5>
@@ -80,6 +87,7 @@ try {
                 </svg>
                 Agregar Materia
             </h5>
+            <button type="button" class="btn-close-custom" id="btn-cerrar-modal" aria-label="Cerrar">&times;</button>
         </div>
         <form action="agregar_materia.php" method="POST" id="form-agregar-materia">
             <div class="modal-card-body">
@@ -101,6 +109,7 @@ try {
                 <input type="hidden" name="estado_id" value="3">
             </div>
             <div class="modal-card-footer">
+                <button type="button" class="btn btn-secondary" id="btn-cancelar-modal">Cancelar</button>
                 <button type="submit" class="btn btn-primary d-inline-flex align-items-center gap-2"
                     name="btnGuardar" value="ok">
                     Guardar

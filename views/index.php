@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio | Agustín Guerrero</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="Styles/estilos.css?v=2.0">
+    <link rel="stylesheet" href="../Styles/estilos.css?v=<?= time(); ?>">
 </head>
-
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-dark container">
@@ -22,8 +18,7 @@
                 <span>Agustín Guerrero</span>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -45,12 +40,11 @@
 
                 <!-- Redes sociales a la derecha -->
                 <div class="d-flex justify-content-center align-items-center gap-3 mt-2 mt-lg-0">
-                    <a href="https://www.linkedin.com/in/agust%C3%ADn-ezequiel-guerrero-1a706726b/" target="_blank"
-                        class="social-icon-link" title="LinkedIn">
-                        <img src="imgs/logotipo-de-linkedin.png" alt="LinkedIn" width="28" height="28">
+                    <a href="https://www.linkedin.com/in/agust%C3%ADn-ezequiel-guerrero-1a706726b/" target="_blank" class="social-icon-link" title="LinkedIn">
+                        <img src="../imgs/logotipo-de-linkedin.png" alt="LinkedIn" width="28" height="28">
                     </a>
                     <a href="https://github.com/agusg26" target="_blank" class="social-icon-link" title="GitHub">
-                        <img src="imgs/github.png" alt="GitHub" width="28" height="28">
+                        <img src="../imgs/github.png" alt="GitHub" width="28" height="28">
                     </a>
                 </div>
             </div>
@@ -70,27 +64,27 @@
                         </div>
                         <div class="card-body d-flex flex-wrap justify-content-center gap-4">
                             <div class="text-center">
-                                <img src="imgs/html-5.png" alt="Logo" width="30" height="34"><br>
+                                <img src="../imgs/html-5.png" alt="Logo" width="30" height="34"><br>
                                 <small>Html</small>
                             </div>
                             <div class="text-center">
-                                <img src="imgs/css.png" alt="Logo" width="30" height="34"><br>
+                                <img src="../imgs/css.png" alt="Logo" width="30" height="34"><br>
                                 <small>Css</small>
                             </div>
                             <div class="text-center">
-                                <img src="imgs/java-script.png" alt="Logo" width="30" height="34"><br>
+                                <img src="../imgs/java-script.png" alt="Logo" width="30" height="34"><br>
                                 <small>Js</small>
                             </div>
                             <div class="text-center">
-                                <img src="imgs/java.png" alt="Logo" width="30" height="34"><br>
+                                <img src="../imgs/java.png" alt="Logo" width="30" height="34"><br>
                                 <small>Java</small>
                             </div>
                             <div class="text-center">
-                                <img src="imgs/piton.png" alt="Logo" width="30" height="34"><br>
+                                <img src="../imgs/piton.png" alt="Logo" width="30" height="34"><br>
                                 <small>Python</small>
                             </div>
                             <div class="text-center">
-                                <img src="imgs/servidor-sql.png" alt="Logo" width="30" height="34"><br>
+                                <img src="../imgs/servidor-sql.png" alt="Logo" width="30" height="34"><br>
                                 <small>Sql</small>
                             </div>
                         </div>
@@ -103,7 +97,7 @@
                     <p id="fondo-p">Soy estudiante de la carrera de
                         Tecnicatura Universitaria en Programacion en la Universidad Nacional de Salta. Me apasiona
                         el mundo de la programacion y cuento con el conocimiento de varias tecnologias aplicandolas
-                        en diferentes proyectos. Me considero habil en el trabajo en equipo, perseverante y capaz de
+                        en diferentes proyectos. Me considero habil en el trabajo en equipo, perseverante y capaz de 
                         superarme a mi mismo en cada desafio
                     </p>
                 </div>
@@ -122,7 +116,7 @@
 
     <section class="py-5" id="progreso-carrera">
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-4">   
                 <div style="text-align: center;">
                     <h2>Progreso carrera</h2>
                 </div>
@@ -134,14 +128,11 @@
                             <h4 class="card-title">Tecnicatura Universitaria en Programación</h4>
                             <h6 class="card-subtitle mb-3 text-muted">Universidad Nacional de Salta (UNSa)</h6>
                             <p class="card-text">
-                                Formación académica enfocada en desarrollo de software, algoritmos, bases de datos y
-                                buenas prácticas de programación.
+                                Formación académica enfocada en desarrollo de software, algoritmos, bases de datos y buenas prácticas de programación.
                             </p>
-
+                            
                             <h5 class="mt-4 mb-2">Materias Finalizadas</h5>
-                            <div id="contenedor-materias">
-                                <div class="text-center py-3 text-muted">Cargando materias finalizadas...</div>
-                            </div>
+                            <?php include 'materias.php'; ?>
                         </div>
                     </div>
                 </div>
@@ -158,48 +149,46 @@
             <table class="table table-bordered table-striped table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Proyecto</th>
-                        <th scope="col">Tecnologia</th>
-                        <th scope="col">Enlace</th>
+                      <th scope="col">#</th>
+                      <th scope="col">Proyecto</th>
+                      <th scope="col">Tecnologia</th>
+                      <th scope="col">Enlace</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Ritmica</td>
-                        <td>Html,Css,Js</td>
-                        <td><a href="https://ritmo-979.pages.dev/" target="_blank">Enlace</a></td>
+                      <th scope="row">1</th>
+                      <td>Ritmica</td>
+                      <td>Html,Css,Js</td>
+                      <td><a href="https://ritmo-979.pages.dev/" target="_blank">Enlace</a></td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Hotel Elegance</td>
-                        <td>Html,Css,Js</td>
-                        <td><a href="https://hotel-elegance-plaza.pages.dev/" target="_blank">Enlace</a></td>
+                      <th scope="row">2</th>
+                      <td>Hotel Elegance</td>
+                      <td>Html,Css,Js</td>
+                      <td><a href="https://hotel-elegance-plaza.pages.dev/" target="_blank">Enlace</a></td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td>FarmApi</td>
-                        <td>Python,MongoDB</td>
-                        <td><a href="https://github.com/agusg26/FarmAPI" target="_blank">Repositorio</a></td>
+                      <th scope="row">3</th>
+                      <td>FarmApi</td>
+                      <td>Python,MongoDB</td>
+                      <td><a href="https://github.com/agusg26/FarmAPI" target="_blank">Repositorio</a></td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>Pagina Conferencia</td>
                         <td>Html,Css,Js</td>
                         <td><a href="https://agusg26.github.io/" target="_blank">Enlace</a></td>
-                    </tr>
-                </tbody>
+                      </tr>
+                  </tbody>
             </table>
         </div>
     </section>
 
     <section id="contacto" class="py-5">
         <div class="container">
-            <div class="row">
-                <div style="text-align: center;">
-                    <h2>CONTACTAME</h2>
-                </div>
+            <div class="row">   
+                <div style="text-align: center;"><h2>CONTACTAME</h2></div>
             </div>
             <br>
             <form id="formulario" action="https://formsubmit.co/agusg2600@gmail.com" method="POST">
@@ -214,8 +203,7 @@
                 <br>
                 <div class="row">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Correo"
-                            name="email" required>
+                        <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Correo" name="email" required>
                     </div>
                 </div>
                 <br>
@@ -227,8 +215,7 @@
                 <br>
                 <div class="row">
                     <div class="form-group">
-                        <textarea style="resize: none;height: 80px;" class="form-control" placeholder="Mensaje"
-                            name="msg"></textarea>
+                        <textarea style="resize: none;height: 80px;" class="form-control" placeholder="Mensaje" name="msg"></textarea>
                     </div>
                 </div>
                 <br>
@@ -238,10 +225,8 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="Utils/script.js?v=2.0"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
+    <script src="../Utils/script.js?v=<?= time(); ?>"></script>
+</body>
 </html>

@@ -8,7 +8,7 @@ if (!empty($_POST['btnModificar'])) {
         $sql = "UPDATE materias SET nombre = ?, estado_id = ?, anio = ? WHERE materias_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$nombre, $estado, $anio, $id]);
-        header("location:index.php#progreso-carrera");
+        header("location:../views/index.php#progreso-carrera");
         exit;
     }
 }

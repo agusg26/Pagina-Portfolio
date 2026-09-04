@@ -1,12 +1,12 @@
 <?php
-require_once __DIR__ . '/connect.php';
+require_once __DIR__ . '/../connect.php';
 
 try {
     // Consulta para obtener las materias finalizadas (Aprobadas / estado_id = 3)
     $sql = "SELECT m.materias_id, m.nombre, m.anio, m.activo,e.nombre AS estado 
             FROM materias m 
             INNER JOIN estados e ON m.estado_id = e.estado_id 
-            WHERE m.estado_id = 3 AND m.activo = 1
+            WHERE (m.estado_id = 3 OR m.nombre = 'Aprobada') AND m.activo = 1
             ORDER BY m.anio ASC, m.materias_id ASC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -53,8 +53,8 @@ try {
                         </td>
                         <!--Botones ocultos-->
                         <td class="col-oculta text-center">
-                            <a type="button" class="btn btn-danger"
-                                href="eliminar_materia.php?id=<?= $materia['materias_id']; ?>">
+                            <a type="button" class="btn btn-danger btn-eliminar"
+                                href="../Controller/eliminar_materia.php?id=<?= $materia['materias_id']; ?>">
                                 Eliminar</a>
                         </td>
                         <td class="col-oculta text-center">
@@ -89,7 +89,7 @@ try {
             </h5>
             <button type="button" class="btn-close-custom" id="btn-cerrar-modal" aria-label="Cerrar">&times;</button>
         </div>
-        <form action="agregar_materia.php" method="POST" id="form-agregar-materia">
+        <form action="../Controller/agregar_materia.php" method="POST" id="form-agregar-materia">
             <div class="modal-card-body">
                 <div class="mb-3 text-start">
                     <label for="nombre_materia" class="form-label">Nombre</label>

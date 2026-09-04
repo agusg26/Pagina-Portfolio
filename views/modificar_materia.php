@@ -1,6 +1,6 @@
 <?php
-require_once 'connect.php';
-include_once 'editar_materia.php';
+require_once __DIR__ . '/../connect.php';
+include_once __DIR__ . '/../Controller/editar_materia.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : (isset($_POST['id']) ? (int)$_POST['id'] : 0);
 $materia = null;
@@ -49,7 +49,7 @@ try {
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="Styles/estilos.css">
+    <link rel="stylesheet" href="../Styles/estilos.css">
 </head>
 
 <body class="edit-page-wrapper">

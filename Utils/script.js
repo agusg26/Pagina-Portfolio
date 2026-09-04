@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Mostrar/Ocultar tarjeta de habilidades
+    // Mostrar/Ocultar habilidades
     const btn = document.getElementById("btnMostrar");
     const card = document.getElementById("skills");
 
@@ -9,22 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.classList.remove("show");
                 setTimeout(() => {
                     card.style.display = "none";
-                }, 500); // Espera a que termine la transición
+                }, 500);
                 btn.textContent = "Mis conocimientos";
             } else {
                 card.style.display = "block";
                 setTimeout(() => {
                     card.classList.add("show");
-                }, 10); // Pequeño delay para que la transición funcione
+                }, 10);
                 btn.textContent = "Ocultar habilidades";
             }
         });
     }
 
-    // 2. Carga dinámica de materias (para index.html si existe el contenedor)
+    // Carga dinámica de materias
     const contenedorMaterias = document.getElementById("contenedor-materias");
     if (contenedorMaterias) {
-        fetch("materias.php?t=" + Date.now(), { cache: "no-store" })
+        const materiasUrl = window.location.pathname.includes('/views/') ? 'materias.php' : 'views/materias.php';
+        fetch(materiasUrl + "?t=" + Date.now(), { cache: "no-store" })
             .then(response => response.text())
             .then(html => {
                 contenedorMaterias.innerHTML = html;
@@ -35,16 +36,23 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
-    // 3. Delegación de eventos para materias.php (Editar, modal de agregar, etc.)
     document.addEventListener("click", (e) => {
-        // Botón Editar (#btn-editar)
+        //Boton eliminar
+        const btnEliminar = e.target.closest(".btn-eliminar");
+        if (btnEliminar) {
+            const confirmacion = confirm("¿Estas seguro de que deseas eliminar esta materia?");
+            if (!confirmacion) {
+                e.preventDefault();
+            }
+            return;
+        }
+        // Botón Editar
         const btnEditar = e.target.closest("#btn-editar");
         if (btnEditar) {
             const contenedorTabla = btnEditar.closest("#contenedor-tabla-materias") || btnEditar.closest(".table-responsive") || document;
             const estaEditando = btnEditar.getAttribute("data-editando") === "true";
 
             if (!estaEditando) {
-                // Activar modo edición
                 btnEditar.setAttribute("data-editando", "true");
                 btnEditar.innerHTML = '<i class="bi bi-check-lg me-1"></i>Listo';
                 btnEditar.classList.remove("btn-outline-dark", "btn-outline-light");
@@ -53,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     contenedorTabla.classList.add("modo-edicion");
                 }
             } else {
-                // Desactivar modo edición
+
                 btnEditar.setAttribute("data-editando", "false");
                 btnEditar.innerHTML = '<i class="bi bi-pencil-square me-1"></i>Editar';
                 btnEditar.classList.remove("btn-secondary");
@@ -63,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Forzar actualización de estilos inline en todos los elementos ocultos por compatibilidad
             const elementosOcultos = contenedorTabla.querySelectorAll(".col-oculta");
             elementosOcultos.forEach(el => {
                 const isTableCol = el.tagName === "TH" || el.tagName === "TD";

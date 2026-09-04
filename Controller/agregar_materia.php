@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/connect.php';
+require_once __DIR__ . '/../connect.php';
 
 if (!empty($_POST['btnGuardar'])) {
     if (!empty($_POST['nombre']) && !empty($_POST['anio'])) {
@@ -12,7 +12,7 @@ if (!empty($_POST['btnGuardar'])) {
 
         $stmt->execute([$nombre, $estado, $anio]);
 
-        header("location:index.php#progreso-carrera");
+        header("location:../views/index.php#progreso-carrera");
         exit;
     } else {
         echo "Por favor, complete todos los campos";
